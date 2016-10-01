@@ -4,10 +4,10 @@ Feature: PC Feature
   Scenario: Correct login
     Given I open habrahabr
     Given I select login
-    Given I input "minchuk94@gmail.com" login
-    Given I input "318114275pac" password
+    Given I input "email" login
+    Given I input "pass" password
     When I submit login
-    Then I should see success "MinchukSergei"
+    Then I should see success "Login"
 
   @2
   Scenario: Logout
@@ -19,7 +19,7 @@ Feature: PC Feature
   Scenario: Incorrect login
     Given I open habrahabr
     Given I select login
-    Given I input "min94@gmail.com" login
-    Given I input "14428" password
+    Given I input "FAILemail" login
+    Given I input "FAILpass" password
     When I submit login
     Then I should see error "Пользователь с такой электронной почтой или паролем не найден"

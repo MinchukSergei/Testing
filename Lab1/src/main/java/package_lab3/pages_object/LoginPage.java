@@ -34,7 +34,7 @@ public class LoginPage {
         if (!result) {
             $(errorField).shouldHave(Condition.text("Пользователь с такой электронной почтой или паролем не найден"));
         } else {
-            $(successField).shouldHave(Condition.attribute("title", "MinchukSergei"));
+            $(successField).shouldHave(Condition.attribute("title", "Login"));
         }
         return this;
     }

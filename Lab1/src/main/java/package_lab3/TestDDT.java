@@ -33,8 +33,8 @@ public class TestDDT {
     @DataProvider
     public Object[][] testData() {
         return new Object[][] {
-                new Object[] {"minchuk94@gmail.com", "318114275pac", true},
-                new Object[] {"pes@gmail.com", "2281488", false},
+                new Object[] {"email", "pass", true},
+                new Object[] {"FAILemail", "failPass", false},
         };
     }
 
