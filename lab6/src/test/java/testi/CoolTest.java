@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -41,8 +42,11 @@ public class CoolTest {
         driver.get("http://www.adukacyja.by/");
         driver.findElement(By.xpath(".//*[@id='essentialnavbar']/div/div/div[2]/div[1]/ul/li/a/em")).click();
         driver.findElement(By.xpath(".//*[@id='username']")).sendKeys("login");
-        driver.findElement(By.xpath(".//*[@id='password']")).sendKeys("password");
+        driver.findElement(By.xpath(".//*[@id='password']")).sendKeys("pass*");
         driver.findElement(By.xpath(".//*[@id='loginbtn']")).click();
+
+        driver.findElement(By.xpath(".//*[@id='inst4']/div[2]/ul/li/ul/li[1]/p/a")).click();
+        driver.findElement(By.xpath(".//*[@id='expandable_branch_0_courses']/a")).click();
 
         // получение данных HAR
         Har har = server.getHar();
